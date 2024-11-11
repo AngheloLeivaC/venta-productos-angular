@@ -1,0 +1,31 @@
+<div class="container">
+    @if(loading){
+        <div class="loader-container">
+            <div>
+              <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="loading-text">Loading...</div>
+            </div>
+          </div>
+    }
+    
+    @if (!loading) {
+        <div class="card mb-3" style="max-width: 850px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="{{product?.image}}" class="card-img-top" alt="{{product?.title}}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                    <h4>{{product?.price  | currency}}</h4>
+                    <h5 class="card-title">{{product?.title}}</h5>
+                    <p class="card-text">{{product?.description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>    
+    }
+</div>
